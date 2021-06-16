@@ -1,0 +1,4 @@
+- Finish update/delete methods on API
+- Make post/put/update/delete funtions available to admin users only
+- Create swagger file
+- Add scraping commands to admin console

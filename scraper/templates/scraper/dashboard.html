@@ -1,0 +1,26 @@
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1 %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% if user.is_authenticated %}
+
+<div class="container">
+    <div>
+        <h1>Webscraping Dashboard</h1>
+    </div>
+
+    <form action="/scraper/" method="post">{% csrf_token %}
+        <input id="action" name="action" value="scan" type="hidden">
+        <p><button type="submit" class="btn btn-primary">Scan</button></p>
+     </form>
+    {% else %}
+    <p>Please log in.</p>
+    {% endif %}
+
+</div>

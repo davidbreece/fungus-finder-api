@@ -1,0 +1,1 @@
+web: gunicorn fungal.wsgi --pythonpath=fungal --log-file -
